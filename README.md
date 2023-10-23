@@ -7,7 +7,9 @@
 
 Live Link: https://mu-brand-shop.web.app
 
-code Link: https://github.com/programming-hero-web-course-4/b8a10-brandshop-server-side-moniru005
+Server-side Link: https://github.com/programming-hero-web-course-4/b8a10-brandshop-server-side-moniru005
+
+Client-side Link: https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-moniru005.git
 ## Features
 
 Certainly! Here are at least 5 project features for a fashion e-commerce brand shop, along with points that include the mentioned requirements:
