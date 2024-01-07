@@ -28,7 +28,9 @@ async function run() {
 
     const userCollection = client.db('brandShopDB').collection('user');
     const productCollection = client.db('brandShopDB').collection('product');
+    const reviewsCollection = client.db('brandShopDB').collection('reviews');
     const cartCollection = client.db('brandShopDB').collection('cart');
+
 
     // Cart API's Data
 
@@ -51,8 +53,7 @@ async function run() {
       res.send(result);
     })
 
-    //Product API's Data
-
+  //Product API's Data
     app.get('/products', async(req, res) =>{
       const products = await productCollection.find().toArray();
       res.send(products);
@@ -122,6 +123,12 @@ async function run() {
       const result = await userCollection.updateOne(filter, updateDoc);
       res.send(result);
     })
+
+    //Reviews API
+    app.get("/reviews", async (req, res) => {
+      const result = await reviewsCollection.find().toArray();
+      res.send(result);
+    });
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
